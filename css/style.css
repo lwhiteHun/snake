@@ -1,0 +1,32 @@
+body{
+    margin:0;
+    padding: 0;
+}
+.main{
+    max-width: 960px;
+    
+}
+
+.tile{
+    float: left;
+    box-sizing: border-box;
+    width: 20%;
+    height: 20%;
+}
+
+.empty{
+    background-color: #eee;
+}
+.food{
+    background-color: #c00;
+}
+.snake{
+    background-color:#0c0;
+}
+
+.playground{
+    width: 90%;
+    height: 500px;
+    overflow: auto;
+}
+
