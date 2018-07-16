@@ -20,10 +20,21 @@ class Playground {
       this.targetDiv.appendChild(tile.div);
     }
     this.setSize();
+    this.snake = new Snake(5, this.tiles);
+    this.generateFood();
   }
   setSize() {
     // a targetDiv pontos értékét kérem vissza - getComputedStyle()
     var style = window.getComputedStyle(this.targetDiv);
     this.targetDiv.style.height = style.width;
+  }
+  generateFood() {
+    // csak empty típusúra generálhat food-ot
+    var filteredTiles = this.tiles.filter(function (item) {
+      return item.type === 'empty';
+    });
+    // ez generálja, hogy melyik tömbelem legyen food
+    var random = Math.floor(Math.random() * filteredTiles.length);
+    filteredTiles[random].setFood();
   }
 }

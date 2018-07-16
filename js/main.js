@@ -1,1 +1,1 @@
-var playGround = new Playground(10, document.querySelector('.playground'));
+var playGround = new Playground(14, document.querySelector('.playground'));
