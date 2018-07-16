@@ -12,6 +12,7 @@ class Playground {
     };
     this.generate();
   }
+
   generate() {
     var tileWidth = 100 / this.width;
     for (var i = 0; i < (this.width * this.width); i++) {
@@ -20,7 +21,8 @@ class Playground {
       this.targetDiv.appendChild(tile.div);
     }
     this.setSize();
-    this.snake = new Snake(5, this.tiles);
+    // referencia a szűlőre, így lehet objektumból is metódust hívni!!!
+    this.snake = new Snake(10, this.tiles, this);
     this.generateFood();
   }
   setSize() {
